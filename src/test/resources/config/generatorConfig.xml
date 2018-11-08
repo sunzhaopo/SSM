@@ -10,9 +10,10 @@
             <property name="suppressAllComments" value="true" />
         </commentGenerator>
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/test" userId="root"
-                        password="root">
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://db4free.net:3306/mysqls"
+                        userId="mysqlroot"
+                        password="12345678">
         </jdbcConnection>
 
         <!-- <jdbcConnection driverClass="oracle.jdbc.OracleDriver" connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:yycg"
@@ -25,29 +26,26 @@
         </javaTypeResolver>
 
         <!-- targetProject:生成PO类的位置 -->
-        <javaModelGenerator targetPackage="com.wuhao.mt.domain"
-                            targetProject=".\src">
+        <javaModelGenerator targetPackage="cn.com.work.entity"
+                            targetProject=".\src\main\java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
             <!-- 从数据库返回的值被清理前后的空格 -->
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
         <!-- targetProject:mapper映射文件生成的位置 -->
-        <sqlMapGenerator targetPackage="com.wuhao.mt.mapper"
-                         targetProject=".\src">
+        <sqlMapGenerator targetPackage="cn.com.work.mapper"
+                         targetProject=".\src\main\java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
         </sqlMapGenerator>
         <!-- targetPackage：mapper接口生成的位置 -->
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.wuhao.mt.mapper" targetProject=".\src">
+                             targetPackage="cn.com.work.dao" targetProject=".\src\main\java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
-        <!-- 指定数据库表 -->
-        <table tableName="user"></table>
-        <table tableName="orders"></table>
-        <table tableName="orderdetail"></table>
-        <table tableName="items"></table>
+        <!--生成对应表及类名-->
+      <table tableName="U_USER" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
     </context>
 </generatorConfiguration>
