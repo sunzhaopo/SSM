@@ -3,7 +3,7 @@ package cn.com.work.dao;
 import cn.com.work.entity.User;
 import org.springframework.stereotype.Repository;
 
-@Repository(value = "userDao")
+@Repository(value = "UserDao")
 public interface UserMapper {
     int deleteByPrimaryKey(String userId);
 
