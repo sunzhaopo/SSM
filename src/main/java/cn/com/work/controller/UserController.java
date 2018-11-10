@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 @Component
 @RequestMapping( "/UserController")
 public class UserController {
-    @Resource(name = "UserService")
+    @Resource
     private UserService userService;
 
     @RequestMapping("/getUser")

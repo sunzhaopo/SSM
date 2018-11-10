@@ -15,13 +15,14 @@ import java.util.List;
  * @create 2018-11-10 8:45
  * @desc 实现类
  */
-@Service(value = "UserService")
+@Service
 public class UserImpl implements UserService{
-    @Resource(name = "UserDao")
+    @Resource
     private UserMapper userDao ;
 
     @Override
     public User findAll(String userId) {
+        System.out.println("cesjhi ");
         return userDao.selectByPrimaryKey(userId);
     }
 }
