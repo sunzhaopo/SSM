@@ -184,6 +184,12 @@
           <version>4.12</version>
           <scope>test</scope>
       </dependency>
+      <!--ftp 远程服务-->
+      <dependency>
+          <groupId>commons-net</groupId>
+          <artifactId>commons-net</artifactId>
+          <version>3.0.1</version>
+      </dependency>
   </dependencies>
 
     <build>
