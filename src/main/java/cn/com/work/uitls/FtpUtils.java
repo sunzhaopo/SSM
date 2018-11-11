@@ -20,7 +20,7 @@ public class FtpUtils {
 
     private FTPClient ftpClient = null;
     private static String ftpHost;
-    private static int ftpPort;
+    private static int ftpPort = 21;
     private static String ftpUserName;
     private static String ftpUserPassword;
     public FtpUtils(String ftpHost,int ftpPort ,String ftpUserName,String ftpUserPassword){
