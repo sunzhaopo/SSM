@@ -2,6 +2,8 @@ package cn.com.work.controller;
 
 import cn.com.work.entity.User;
 import cn.com.work.service.UserService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,7 +23,8 @@ public class UserController {
     @RequestMapping("/getUser")
     @ResponseBody
     public User getUser(){
-
+        PageHelper.startPage(0, 0);
+        new PageInfo();
         return userService.findAll("111");
     }
 }
