@@ -2,6 +2,9 @@ package cn.com.work.uitls;/**
  * Created by user on 2018/11/11.
  */
 
+import org.apache.log4j.Logger;
+
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -12,6 +15,9 @@ import java.util.Date;
  * @desc 日期工具
  */
 public class DateUtil {
+
+    private static Logger logger = Logger.getLogger(DateUtil.class);
+
     private DateUtil(){};
 
     /**
@@ -24,6 +30,9 @@ public class DateUtil {
 
     public  static String dateTimeFormat = "yyyy-MM-dd HH:mm:ss";
 
+    public static SimpleDateFormat getSdf(String dateTimeType){
+        return new SimpleDateFormat(dateTimeType);
+    }
     /**
      * 获取前一天日期yyyy-MM-dd
      * @see 经测试，针对闰年02月份或跨年等情况，该代码仍有效。测试代码如下
@@ -52,7 +61,7 @@ public class DateUtil {
      * 获取当前的日期
      */
     public static String getCurrentDate(String format){
-        return new SimpleDateFormat(format).format(new Date());
+        return  getSdf(format).format(new Date());
     }
 
     /**
@@ -60,10 +69,25 @@ public class DateUtil {
      * @return
      */
     public static String getCurrentTime(){
-        return new SimpleDateFormat(dateTimeFormat).format(new Date());
+        return  getSdf(dateTimeFormat).format(new Date());
     }
     /**
      * @see 比较两个时间大小
      * @return
      */
+    public static int comparDate(Date bDate,Date eDate ){
+        return bDate.compareTo(eDate);
+    }
+    public static int comparDate(String bDate,String eDate ){
+        SimpleDateFormat sdf = getSdf(dateTimeFormat);
+        Date beginDate  = null ;
+        Date endDate = null ;
+        try {
+            beginDate = sdf.parse(bDate);
+            endDate = sdf.parse(eDate);
+        } catch (ParseException e) {
+            logger.error("");
+        }
+        return beginDate.compareTo(endDate);
+    }
 }
