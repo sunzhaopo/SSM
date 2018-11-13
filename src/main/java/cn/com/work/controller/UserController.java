@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Admin on 2018/11/10.
@@ -22,9 +24,10 @@ public class UserController {
 
     @RequestMapping("/getUser")
     @ResponseBody
-    public User getUser(){
-        PageHelper.startPage(0, 0);
-        new PageInfo();
-        return userService.findAll("111");
+    public PageInfo getUser(){
+        PageHelper.startPage(0, 15);
+        List<User> list= new ArrayList();
+        list.add(userService.findAll("111"));
+        return   new PageInfo(list);
     }
 }

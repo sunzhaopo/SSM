@@ -4,7 +4,7 @@ import cn.com.work.entity.User;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserMapper {
+public interface UserMapper extends BaseDao<User,String> {
     int deleteByPrimaryKey(String userId);
 
     int insert(User record);
