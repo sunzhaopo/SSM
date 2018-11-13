@@ -3,10 +3,10 @@
 <html>
 <head>
     <title>登陆页面</title>
-    <script src="${pageContext.request.contextPath}/webjars/jquery/3.1.1/jquery.min.js"></script>
-    <script src="${pageContext.request.contextPath}/webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <link rel="stylesheet"  href="${pageContext.request.contextPath}/webjars/bootstrap/3.3.5/css/bootstrap.min.css" />
-    <link href="${pageContext.request.contextPath}/webjars/bootstrap/css/font-awesome.min.css" rel="stylesheet">
+    <script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"  href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link href="webjars/bootstrap/css/font-awesome.min.css" rel="stylesheet">
     <style type="text/css">
         body{
             background: url("../img/1.jpg");
