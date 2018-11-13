@@ -1,15 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
     <title>登陆页面</title>
-    <script src="webjars/jquery/3.1.1/jquery.min.js"></script>
-    <script src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <link rel="stylesheet"  href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" />
-    <link href="webjars/bootstrap/css/font-awesome.min.css" rel="stylesheet">
+    <script src="${pageContext.request.contextPath}/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"  href="${pageContext.request.contextPath}/webjars/bootstrap/3.3.5/css/bootstrap.min.css" />
     <style type="text/css">
         body{
-            background: url("../img/1.jpg");
+            background: url("${pageContext.request.contextPath}/resources/image/login_1.jpg");
             animation-name:myfirst;
             animation-duration:12s;
             /*变换时间*/
@@ -22,10 +22,10 @@
         }
         @keyframes myfirst
           {
-            0% {background:url("../img/1.jpg");}
-            34% {background:url("../img/2.jpg");}
-            67% {background:url("../img/3.jpg");}
-            100% {background:url("../img/1.jpg");}
+            0% {background:url("${pageContext.request.contextPath}/resources/image/login_1.jpg");}
+            34% {background:url("${pageContext.request.contextPath}/resources/image/login_2.jpg");}
+            67% {background:url("${pageContext.request.contextPath}/resources/image/login_3.jpg");}
+            100% {background:url("${pageContext.request.contextPath}/resources/image/login_1.jpg");}
         }
         .form{background: rgba(255,255,255,0.2);width:400px;margin:120px auto;}
         /*阴影*/
@@ -47,7 +47,7 @@
                     </div>
                     <div class="form-group">
                         <i class="fa fa-lock fa-lg"></i>
-                        <input class="form-control required" type="password" placeholder="Password" id="password" name="password" maxlength="8"/>
+                        <input class="form-control required" type="password"  placeholder="Password" id="password" name="password" maxlength="8"/>
                     </div>
                     <div class="form-group">
                         <label class="checkbox">
