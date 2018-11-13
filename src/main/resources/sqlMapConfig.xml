@@ -4,5 +4,16 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-
+    <typeAliases>
+        <package name="cn.com.work.entity"/>
+    </typeAliases>
+    <plugins>
+        <!--本工程使用的pagehelper版本为4.0以上所以实现的接口为 ： com.github.pagehelper.PageInterceptor，且可以自动识别数据库
+                4.0一下的版本实现接口为 ： com.github.pagehelper.PageHelper 需要指定数据库类型
+        -->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!--设置数据可类型Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库-->
+            <!-- <property name="dialect" value="Oracle"/>-->
+        </plugin>
+    </plugins>
 </configuration>
