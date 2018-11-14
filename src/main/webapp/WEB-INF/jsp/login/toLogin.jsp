@@ -49,6 +49,13 @@
                         <i class="fa fa-lock fa-lg"></i>
                         <input class="form-control required" type="password"  placeholder="Password" id="password" name="password" maxlength="8"/>
                     </div>
+                  <div class="form-group">
+                       <i class="fa fa-lock fa-lg"></i>
+                    <input type="text" class="form-control required" id="inputPassword3" name="ucheckC" placeholder="请输入验证码">
+                <%--    <div class="col-sm-3">--%>
+                <%--      <img id="checkCodeImg" src="CheckCodeServlet" onclick="checkCode(this)"/>--%>
+                <%--    </div>--%>
+                    </div>
                     <div class="form-group">
                         <label class="checkbox">
                             <input type="checkbox" name="remember" value="1"/>记住我 </label>
