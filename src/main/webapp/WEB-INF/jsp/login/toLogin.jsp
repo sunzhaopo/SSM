@@ -3,6 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>登陆页面</title>
     <script src="${pageContext.request.contextPath}/webjars/jquery/3.1.1/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -35,43 +38,40 @@
     </style>
 </head>
 <body>
-  <form class="form-horizontal">
-    <div class="container">
-        <div class="form row">
-            <div class="form-horizontal col-md-offset-3" id="login_form">
-                <h3 class="form-title">LOGIN</h3>
-                <div class="col-md-9">
-                    <div class="form-group">
-                        <i class="fa fa-user fa-lg"></i>
-                        <input class="form-control required" type="text" placeholder="Username" id="username" name="username" autofocus="autofocus" maxlength="20"/>
+<div class="container">
+    <div class="form row">
+        <div class="form-horizontal col-md-offset-3" id="login_form">
+            <h3 class="form-title">LOGIN</h3>
+            <div class="col-xs-9">
+                <div class="form-group">
+                    <input class="form-control required" type="text" placeholder="请输入员工号" id="username" name="username" autofocus="autofocus" maxlength="20"/>
+                </div>
+                <div class="form-group">
+                    <input class="form-control required" type="password" placeholder="请输入密码" id="password" name="password" maxlength="8"/>
+                </div>
+                <%--<div class="form-group list-inline">--%>
+                    <%--<input class="form-control required" type="text" placeholder="请输入验证码" id="verifCode" name="verifCode" maxlength="8"/>--%>
+                <%--</div>--%>
+                <div class="form-group list-inline">
+                    <div>
+                    <input class="form-control required" type="text" placeholder="请输入验证码" id="verifCode" name="verifCode" maxlength="8"/>
+                     <img src="${pageContext.request.contextPath}/login/getkaptchaCode.do" id="kaptchaImage"style="cursor:pointer">
                     </div>
-                    <div class="form-group">
-                        <i class="fa fa-lock fa-lg"></i>
-                        <input class="form-control required" type="password"  placeholder="Password" id="password" name="password" maxlength="8"/>
-                    </div>
-                  <div class="form-group">
-                       <i class="fa fa-lock fa-lg"></i>
-                    <input type="text" class="form-control required" id="inputPassword3" name="ucheckC" placeholder="请输入验证码">
-                <%--    <div class="col-sm-3">--%>
-                <%--      <img id="checkCodeImg" src="CheckCodeServlet" onclick="checkCode(this)"/>--%>
-                <%--    </div>--%>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="remember" value="1"/>记住我
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group col-md-offset-9">
-                        <button type="submit" class="btn btn-success pull-right" name="submit">登录</button>
-                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox">
+                        <input type="checkbox" name="remember" value="1"/>记住我
+                    </label>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success pull-left  btn-lg" name="submit">登录</button>
+                    <button type="submit" class="btn btn-default  pull-right  btn-lg  active" name="submit">
+                        <div class="text-success">注册</div>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-  </form>
+</div>
 </body>
 </html>
