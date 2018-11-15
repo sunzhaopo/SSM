@@ -31,11 +31,11 @@
         /*阴影*/
         .fa{display: inline-block;top: 27px;left: 6px;position: relative;color: #ccc;}
         input[type="text"],input[type="password"]{padding-left:26px;}
-        .checkbox{padding-left:21px;
-                                                                                                                                                                                                                                                                                                                                                                                                                    }
+        .checkbox{padding-left:21px;}
     </style>
 </head>
 <body>
+  <form class="form-horizontal">
     <div class="container">
         <div class="form row">
             <div class="form-horizontal col-md-offset-3" id="login_form">
@@ -57,8 +57,13 @@
                 <%--    </div>--%>
                     </div>
                     <div class="form-group">
-                        <label class="checkbox">
-                            <input type="checkbox" name="remember" value="1"/>记住我 </label>
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="remember" value="1"/>记住我
+                                </label>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group col-md-offset-9">
                         <button type="submit" class="btn btn-success pull-right" name="submit">登录</button>
@@ -67,5 +72,6 @@
             </div>
         </div>
     </div>
+  </form>
 </body>
 </html>
