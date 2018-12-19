@@ -36,16 +36,16 @@ public class StringUtil {
 
     /**
      * 字符编码
-     * @see 该方法默认会以UTF-8编码字符串
-     * @see 若想自己指定字符集,可以使用<code>encode(String chinese, String charset)</code>方法
+     *  该方法默认会以UTF-8编码字符串
+     *  若想自己指定字符集,可以使用<code>encode(String chinese, String charset)</code>方法
      */
     public static String encode(String chinese){
         return encode(chinese, "UTF-8");
     }
     /**
      * 字符编码
-     * @see 该方法通常用于对中文进行编码
-     * @see 若系统不支持指定的编码字符集,则直接将<code>chinese</code>原样返回
+     * 该方法通常用于对中文进行编码
+     *  若系统不支持指定的编码字符集,则直接将<code>chinese</code>原样返回
      */
     public static String encode(String chinese, String charset){
         chinese = (chinese==null ? "" : chinese);
@@ -58,8 +58,9 @@ public class StringUtil {
     }
     /**
      * 字符解码
-     * @see 该方法默认会以UTF-8解码字符串
-     * @see 若想自己指定字符集,可以使用<code>decode(String chinese, String charset)</code>方法
+     * 该方法默认会以UTF-8解码字符串
+     * 若想自己指定字符集,可以使用<code>decode(String chinese, String charset)</code>方法
+     * @param chinese
      */
     public static String decode(String chinese){
         return decode(chinese, "UTF-8");
@@ -67,8 +68,10 @@ public class StringUtil {
 
     /**
      * 字符解码
-     * @see 该方法通常用于对中文进行解码
-     * @see 若系统不支持指定的解码字符集,则直接将<code>chinese</code>原样返回
+     * 该方法通常用于对中文进行解码
+     *  若系统不支持指定的解码字符集,则直接将<code>chinese</code>原样返回
+     *  @param charset
+     *  @param chinese
      */
     public static String decode(String chinese, String charset){
         chinese = (chinese==null ? "" : chinese);
