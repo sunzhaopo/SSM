@@ -35,11 +35,6 @@ public class DateUtil {
     }
     /**
      * 获取前一天日期yyyy-MM-dd
-     * @see 经测试，针对闰年02月份或跨年等情况，该代码仍有效。测试代码如下
-     * @see calendar.set(Calendar.YEAR, 2013);
-     * @see calendar.set(Calendar.MONTH, 0);
-     * @see calendar.set(Calendar.DATE, 1);
-     * @see 测试时，将其放到<code>calendar.add(Calendar.DATE, -1);</code>前面即可
      * @return 返回的日期格式为yyyy-MM-dd
      */
     public static String getYestoday(){
@@ -65,14 +60,14 @@ public class DateUtil {
     }
 
     /**
-     *  @see 获取当前的时间
+     *  获取当前的时间
      * @return
      */
     public static String getCurrentTime(){
         return  getSdf(dateTimeFormat).format(new Date());
     }
     /**
-     * @see 比较两个时间大小
+     *  比较两个时间大小
      * @return
      */
     public static int comparDate(Date bDate,Date eDate ){
